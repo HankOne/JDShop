@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xmlns="http://java.sun.com/xml/ns/javaee" 
+				xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+				id="WebApp_ID" version="2.5">
+  <display-name>JDShop</display-name>
+  	<welcome-file-list>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- 自动登录的filter -->
+	<filter>
+		<filter-name>AutoLoginFilter</filter-name>
+		<filter-class>com.hank.web.filter.AutoLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AutoLoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
+	<servlet>
+		<servlet-name>CheckImgServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.CheckImgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckImgServlet</servlet-name>
+		<url-pattern>/checkImg</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RegisterServlet</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>CheckUsernameServlet</display-name>
+		<servlet-name>CheckUsernameServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.CheckUsernameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckUsernameServlet</servlet-name>
+		<url-pattern>/checkUsername</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ProductServlet</display-name>
+		<servlet-name>ProductServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductServlet</servlet-name>
+		<url-pattern>/product</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>BaseServlet</display-name>
+		<servlet-name>BaseServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.BaseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BaseServlet</servlet-name>
+		<url-pattern>/BaseServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>SearchWordServlet</display-name>
+		<servlet-name>SearchWordServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.SearchWordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchWordServlet</servlet-name>
+		<url-pattern>/searchWord</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.hank.web.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+</web-app>
